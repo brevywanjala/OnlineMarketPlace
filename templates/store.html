@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Store.html</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -36,6 +37,13 @@
             </div>
         </div>
   </nav>
+  <!-- Mobile Menu -->
+<div class="mobile-menu hidden md:hidden bg-gray-800">
+  <a href="/store" class="block px-4 py-2 text-sm hover:bg-gray-700">My store</a>
+  <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">My Info</a>
+  <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">Services</a>
+  <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">Contact</a>
+</div>
   <div class="container mx-auto px-4 py-8">
     <h1 class="text-xl font-semibold mb-4" onclick="openCard('card1')">What should I contribute to?</h1>
   
@@ -50,9 +58,9 @@
 
   <!-- not part of the code the code diplays the instruction -->
   <!-- the code below should not be touched -->
-  <div class="card1 w-screen xs:w-screen sm:max-h-3/4 md:max-h-3/4 lg:max-h-3/4 sm:w-screen lg:w-3/4 overflow-auto md:w-3/4" id="card1">
-    <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
-        <div class="p-4">
+  <div class="card1 h-3/4 w-screen xs:w-screen sm:max-h-3/4 md:max-h-3/4 lg:max-h-3/4 sm:w-screen lg:w-3/4 overflow-auto md:w-3/4" id="card1">
+    <div class="bg-gray-900 rounded-lg shadow-lg ">
+        <div class="p-4 mb-2">
           <h3 class="text-xl font-semibold text-white mb-2">Store.html Page</h3>
           <p class="text-gray-400">✔ The store.html page will have a page that will show the products for each store owner.</p>
           <p class="text-gray-400">✔ The store.html page represents a page for one store owner.</p>
@@ -64,13 +72,22 @@
           <p class="text-gray-400 mt-2">✔ Similar products from other stores and from my store should appear when the user selects a product from one store for purchase.</p>
           <p class="text-gray-400">✔ We shall setup fake payments of products – which will later be updated to real via Paystack and M-Pesa (day 10).</p>
           <p class="text-gray-400">✔ Include the number of purchases of each product.</p>
+          <button  onclick="closeCard()" class=" bg-red-500 p-2 w-3/4 rounded-lg justify-center items-center m-2 flex">Close</button>
+             
+          <h3 class="text-xl font-semibold text-white mb-2">Contribute to other pages</h3>
+          <ul class="list-disc list-inside text-gray-400 mb-2">
+            <a href="/login" class="text-blue-100 hover:text-blue-200"><li>1) Login.html</li></a>
+            <a href="/" class="text-blue-100 hover:text-blue-200"><li >2) index.html</li></a>
+            <a href="/signup" class="text-blue-100 hover:text-blue-200"><li >2) signup.html</li></a>
+          </ul>
         </div>
-        <button  onclick="closeCard()" class=" bg-red-500 p-2 w-3/4 rounded-lg justify-center items-center m-2 flex">Close</button>
-           
+
+        
     </div>
   </div>
     <!-- end of code -->
+    
+    <script src="/static/js/popcard.js"></script>
 </body>
-<script src="/static/js/popcard.js"></script>
 
 </html>
