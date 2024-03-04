@@ -8,7 +8,10 @@ import os
 app=Flask(__name__)
 app.secret_key='skadwhbhKAcwey'
 
-
+@app.route("/store")
+def store():
+    # this reperesents the page fetching data of products of a single store owner
+   return render_template("store.html")
 @app.route("/" ,methods=["POST", "GET"])
 def index():
     db_session=Session()

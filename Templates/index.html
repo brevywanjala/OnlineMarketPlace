@@ -12,6 +12,7 @@
 </head>
 
 <body class="bg-gray-900 text-white">
+    <div class="card-overlay" onclick="closeCard()"></div>
 <!-- Navbar -->
 <nav class="bg-gray-800 shadow-lg">
     <div class="container mx-auto px-4">
@@ -22,10 +23,10 @@
             </div>
             <!-- Links -->
             <div class="hidden md:flex items-center">
-                <a href="#" class="px-4 py-2 hover:text-gray-300">Home</a>
+                <a href="/store" class="px-4 py-2 hover:text-gray-300">My store</a>
                 <a href="#" class="px-4 py-2 hover:text-gray-300">My info</a>
-                <a href="#" class="px-4 py-2 hover:text-gray-300">Services</a>
-                <a href="#" class="px-4 py-2 hover:text-gray-300">Contact</a>
+                <a href="/login" class="px-4 py-2 hover:text-gray-300">Login</a>
+                <a href="#" class="px-4 py-2 hover:text-gray-300">Logout</a>
             </div>
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
@@ -41,7 +42,7 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu hidden md:hidden bg-gray-800">
-    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">Home</a>
+    <a href="/store" class="block px-4 py-2 text-sm hover:bg-gray-700">My store</a>
     <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">My Info</a>
     <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">Services</a>
     <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">Contact</a>
@@ -61,6 +62,16 @@
 </div>
 {% endif %}
 {% endwith %}
+<div class="container mx-auto px-2 py-2">
+    <h1 class="text-xl font-semibold mb-4" onclick="openCard('card1')">What should I contribute to?</h1>
+  
+
+</div>
+<div class="container mx-auto px-2 py-2">
+    <h1 class="text-xl font-semibold mb-4" onclick="openCard('card2')">I dont know where to start</h1>
+  
+
+</div>
 
 <div class="container mx-auto px-4 mt-1 text-sm flex justify-center">
     <button class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4" onclick="showForm('form1')">
@@ -196,6 +207,62 @@
 </div>
 
 
+
+ <!-- not part of the code the code diplays the instruction -->
+  <!-- the code below should not be touched -->
+  <div class="card1 sm:h-3/4 md:h-3/4 overflow-auto md:w-screen" id="card1">
+    <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-white mb-2">Index.html Page</h3>
+
+          <p class="text-gray-400">✔ The Index.html represents the store owners admin dashboard to add/delete and update products.</p>
+          <p class="text-gray-400">✔ This page should be protected since it is the admin dashboard</p>
+          <p class="text-gray-400">✔ The store owners should be able to add/delete/update their products.</p>
+          <p class="text-gray-400">✔ A graph should show the amount earned overtime ordered monthly for their sales</p>
+          <p class="text-gray-400 mt-2">✔ Number of users visiting their page and number of sales</p>
+          <p class="text-gray-400">✔ We shall setup fake payments of products – which will later be updated to real via Paystack and M-Pesa (day 10).</p>
+          <p class="text-gray-400">✔ Include calculations for determing their profits and loses if they feed their expenditures</p>
+          <p class="text-gray-400">✔ While designing use colors closer to dark ui</p>
+        </div>
+    </div>
+   </div>
+    <div class="card1" id="card2">
+    
+        <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold text-white mb-2">Frequently asked quetions
+                <a href="https://www.youtube.com/" class="ml-4" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube text-red-500 text-2xl"></i>View on youtube
+                  </a>
+              </h3>
+    
+              <p class="text-gray-400">✔ What language are we designing with?</p>
+              <ul class="list-disc list-inside text-gray-400">
+                <li>1) python Flask</li>
+                <li>2) SqlAlchemy Database</li>
+              </ul>
+              <p class="text-gray-400">✔ I am a frontend developer how can i contribute?</p>
+              <ul class="list-disc list-inside text-gray-400">
+                <li>1) You can participate in modifying the page design and Implement the logic to signin with google</li>
+                <li>2) Study on how to integrate google sites to store owners dashboard</li>
+                <li>3) Participate in designing the main.html which will be the first visiting page for users</li>
+
+              </ul>
+              <p class="text-gray-400">✔ I have studied Django ,is python Flask beginner friendly?</p>
+              <li>Flask is a simple developer friendly and easy to setup framework</li>
+              <p class="text-gray-400">✔ To understand the project design and setup have a look at this youtube playlist
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+              </p>
+              <p class="text-gray-400 mt-2">✔ Clone this github repository to your pc to get started</p>
+              <p class="text-gray-400">✔ We shall setup fake payments of products – which will later be updated to real via Paystack and M-Pesa (day 10).</p>
+              <p class="text-gray-400">✔ Include calculations for determing their profits and loses if they feed their expenditures</p>
+              <p class="text-gray-400">✔ While designing use colors closer to dark ui</p>
+            </div>
+        </div>
+    </div>
+    <!-- end of code -->
 
 
 <script src="/static/js/popcard.js"></script>

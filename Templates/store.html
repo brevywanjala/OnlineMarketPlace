@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store.html</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body class="bg-gray-900 text-white">
+    <div class="card-overlay" onclick="closeCard()"></div>
+    <nav class="bg-gray-800 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Brand -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold">Online market Store</a>
+                </div>
+                <!-- Links -->
+                <div class="hidden md:flex items-center">
+                    <a href="#" class="px-4 py-2 hover:text-gray-300">Home</a>
+                    <a href="#" class="px-4 py-2 hover:text-gray-300">My info</a>
+                    <a href="#" class="px-4 py-2 hover:text-gray-300">Services</a>
+                    <a href="#" class="px-4 py-2 hover:text-gray-300">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+  </nav>
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-xl font-semibold mb-4" onclick="openCard('card1')">What should I contribute to?</h1>
+  
+
+  </div>
+    <!-- Add your store content here -->
+    <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden p-6">
+      <!-- Store content goes here -->
+    </div>
+  </div>
+
+
+  <!-- not part of the code the code diplays the instruction -->
+  <!-- the code below should not be touched -->
+  <div class="card1" id="card1">
+    <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-white mb-2">Store.html Page</h3>
+          <p class="text-gray-400">✔ The store.html page will have a page that will show the products for each store owner.</p>
+          <p class="text-gray-400">✔ The store.html page represents a page for one store owner.</p>
+          <p class="text-gray-400">✔ The store owners will link to their stores using:</p>
+          <ul class="list-disc list-inside text-gray-400">
+            <li>1) A sharable link</li>
+            <li>2) A Google Sites domain that will redirect to their respective pages (to be completed on day 11)</li>
+          </ul>
+          <p class="text-gray-400 mt-2">✔ Similar products from other stores and from my store should appear when the user selects a product from one store for purchase.</p>
+          <p class="text-gray-400">✔ We shall setup fake payments of products – which will later be updated to real via Paystack and M-Pesa (day 10).</p>
+          <p class="text-gray-400">✔ Include the number of purchases of each product.</p>
+        </div>
+    </div>
+    <!-- end of code -->
+</body>
+<script src="/static/js/popcard.js"></script>
+
+</html>
