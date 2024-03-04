@@ -210,31 +210,34 @@
 
  <!-- not part of the code the code diplays the instruction -->
   <!-- the code below should not be touched -->
-  <div class="card1 sm:h-3/4 md:h-3/4 overflow-auto md:w-screen" id="card1">
-    <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold text-white mb-2">Index.html Page</h3>
-
-          <p class="text-gray-400">✔ The Index.html represents the store owners admin dashboard to add/delete and update products.</p>
-          <p class="text-gray-400">✔ This page should be protected since it is the admin dashboard</p>
-          <p class="text-gray-400">✔ The store owners should be able to add/delete/update their products.</p>
-          <p class="text-gray-400">✔ A graph should show the amount earned overtime ordered monthly for their sales</p>
-          <p class="text-gray-400 mt-2">✔ Number of users visiting their page and number of sales</p>
-          <p class="text-gray-400">✔ We shall setup fake payments of products – which will later be updated to real via Paystack and M-Pesa (day 10).</p>
-          <p class="text-gray-400">✔ Include calculations for determing their profits and loses if they feed their expenditures</p>
-          <p class="text-gray-400">✔ While designing use colors closer to dark ui</p>
-        </div>
-    </div>
-   </div>
-    <div class="card1" id="card2">
-    
+    <div class="card1 w-screen xs:w-screen sm:max-h-3/4 md:max-h-3/4 lg:max-h-3/4 sm:w-screen lg:w-3/4 overflow-auto md:w-3/4" id="card1">
         <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
             <div class="p-4">
+                <h3 class="text-xl font-semibold text-white mb-2">Index.html Page</h3>
+
+                <p class="text-gray-400">✔ The Index.html represents the store owners admin dashboard to add/delete and update products.</p>
+                <p class="text-gray-400">✔ This page should be protected since it is the admin dashboard</p>
+                <p class="text-gray-400">✔ The store owners should be able to add/delete/update their products.</p>
+                <p class="text-gray-400">✔ A graph should show the amount earned overtime ordered monthly for their sales</p>
+                <p class="text-gray-400 mt-2">✔ Number of users visiting their page and number of sales</p>
+                <p class="text-gray-400">✔ We shall setup fake payments of products – which will later be updated to real via Paystack and M-Pesa (day 10).</p>
+                <p class="text-gray-400">✔ Include calculations for determing their profits and loses if they feed their expenditures</p>
+                <p class="text-gray-400">✔ While designing use colors closer to dark ui</p>
+                <button  onclick="closeCard()" class=" bg-red-500 p-2 w-3/4 rounded-lg justify-center items-center m-2 flex">Close</button>
+          
+            </div>
+        </div>
+    </div>
+    <div class="card1 w-screen h-3/4 xs:w-screen sm:max-h-3/4 md:max-h-3/4 lg:max-h-3/4 sm:w-screen lg:w-3/4 overflow-auto md:w-3/4 m-2" id="card2">
+        <div class="bg-gray-900 rounded-lg shadow-lg">
+            <button class="bg-red-500 p-2 rounded-lg flex justify-end m-2 " onclick="closeCard()">Back</button>
+            <div class="p-4">
               <h3 class="text-xl font-semibold text-white mb-2">Frequently asked quetions
-                <a href="https://www.youtube.com/" class="ml-4" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/playlist?list=PLdxb9GLT33Q8Hca4eY2Pk9COMgpQB-LaD" class="ml-4" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-youtube text-red-500 text-2xl"></i>View on youtube
                   </a>
               </h3>
+              
     
               <p class="text-gray-400">✔ What language are we designing with?</p>
               <ul class="list-disc list-inside text-gray-400">
@@ -251,14 +254,19 @@
               <p class="text-gray-400">✔ I have studied Django ,is python Flask beginner friendly?</p>
               <li>Flask is a simple developer friendly and easy to setup framework</li>
               <p class="text-gray-400">✔ To understand the project design and setup have a look at this youtube playlist
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/playlist?list=PLdxb9GLT33Q8Hca4eY2Pk9COMgpQB-LaD" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-youtube"></i>
                   </a>
               </p>
-              <p class="text-gray-400 mt-2">✔ Clone this github repository to your pc to get started</p>
+              <p class="text-gray-400 mt-2">✔ Clone this github repository to your pc to get started
+                <a href="https://github.com/brevywanjala/OnlineMarketPlace" class="lg:text-2xl md:text-xl sm:text-lg xs:text-sm bg-gray-700 p-2 rounded-lg text-blue-200" target="_blank" rel="noopener noreferrer">
+                    Github repository
+                  </a>
+              </p>
               <p class="text-gray-400">✔ We shall setup fake payments of products – which will later be updated to real via Paystack and M-Pesa (day 10).</p>
               <p class="text-gray-400">✔ Include calculations for determing their profits and loses if they feed their expenditures</p>
               <p class="text-gray-400">✔ While designing use colors closer to dark ui</p>
+              <button  onclick="closeCard()" class=" bg-red-500 p-2 w-3/4 rounded-lg justify-center items-center m-2 flex">Close</button>
             </div>
         </div>
     </div>
