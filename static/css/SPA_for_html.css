@@ -1,0 +1,102 @@
+
+.btn-page-lg1 {
+    background-color: #4CAF50; /* Bright green */
+    color: #ffffff; /* White text */
+    padding: 0.75rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  body {
+    padding: 1rem; /* Equivalent to p-4 */
+  }
+  
+  /* Level 1 - Pages */
+  .btn-page-xl {
+    background-color: #1976D2; /* Bright blue */
+    color: #ffffff; /* White text */
+    padding: 0.75rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  .page-xl {
+    background-color: #E3F2FD; /* Light blue */
+    color: #1565C0; /* Dark blue text */
+    padding: 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  /* Level 2 - Subpages */
+  .btn-page-lg1,
+  .btn-page-lg2 {
+    background-color: #4CAF50; /* Bright green */
+    color: #ffffff; /* White text */
+    padding: 0.75rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  .page-lg {
+    background-color: #86cdb4; /* Light green */
+    color: #2E7D32; /* Dark green text */
+    padding: 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  /* Level 3 - Subpages */
+  .btn-page-sm1,
+  .btn-page-sm2 {
+    background-color: #aea12f; /* Bright yellow */
+    color: #ffffff; /* White text */
+    padding: 0.75rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  .page-sm {
+    background-color: #e5de9f; /* Light yellow */
+    color: #815105; /* Dark yellow text */
+    padding: 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  /* Level 4 - Subpages */
+  .btn-page-xs1,
+  .btn-page-xs2 {
+    background-color: #F44336; /* Bright red */
+    color: #ffffff; /* White text */
+    padding: 0.75rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  .page-xs {
+    background-color: #f5bec6; /* Light red */
+    color: #C62828; /* Dark red text */
+    padding: 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  /* Level 5 - Subpages */
+  .btn-page-ss1,
+  .btn-page-ss2 {
+    background-color: #9C27B0; /* Bright purple */
+    color: #ffffff; /* White text */
+    padding: 0.75rem 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  
+  .page-ss {
+    background-color: #F3E5F5; /* Light purple */
+    color: #7B1FA2; /* Dark purple text */
+    padding: 1rem; /* Equivalent to px-4 py-2 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  }
+  

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark UI Navbar</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+
+</head>
+
+<body class="bg-gray-900 text-white">
+<!-- Navbar -->
+<nav class="bg-gray-800 shadow-lg">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <!-- Brand -->
+            <div class="flex-shrink-0">
+                <a href="#" class="text-xl font-bold">Online market Store</a>
+            </div>
+            <!-- Links -->
+            <div class="hidden md:flex items-center">
+                <a href="#" class="px-4 py-2 hover:text-gray-300">Home</a>
+                <a href="#" class="px-4 py-2 hover:text-gray-300">My info</a>
+                <a href="#" class="px-4 py-2 hover:text-gray-300">Services</a>
+                <a href="#" class="px-4 py-2 hover:text-gray-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button class="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu hidden md:hidden bg-gray-800">
+    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">Home</a>
+    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">My Info</a>
+    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">Services</a>
+    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700">Contact</a>
+</div>
+
+<!-- JavaScript to toggle mobile menu -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="w-1/2 justify-center flex">
+    <div class="text-sm font-semibold bg-blue-100 justify-center flex p-2 rounded-lg ">
+            <ul>
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+    </div>
+</div>
+{% endif %}
+{% endwith %}
+
+<div class="container mx-auto px-4 mt-1 text-sm flex justify-center">
+    <button class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4" onclick="showForm('form1')">
+        <i class="fas fa-plus mr-2"></i> Add Items
+    </button>
+    <button class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4" onclick="showForm('form2')">
+        <i class="fas fa-boxes mr-2"></i> All Items
+    </button>
+    <button class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="showForm('form3')">
+        <i class="fas fa-chart-line mr-2"></i> Sales
+    </button>
+</div>
+
+
+
+<!-- Item Container -->
+
+<!-- JavaScript to toggle layout -->
+
+
+<div id="form1" class="form-js unhidden dark-text " action="/" data-form-id="form1">
+    <div class="container mx-auto px-4 py-8 flex justify-center ">
+        
+        <form action="#" method="POST" class="w-full max-w-lg" enctype="multipart/form-data">
+        <h1 class="text-2xl font-semibold mb-4">Add New Item</h1>
+        <!-- Item Name -->
+        <div class="mb-4">
+            <label for="itemName" class="block mb-2">Item Name</label>
+            <input type="text" id="itemName" name="item_name" class="w-full bg-gray-800 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" placeholder="Enter item name">
+        </div>
+        <!-- Amount -->
+        <div class="mb-4">
+            
+            <input type="number" id="itemAmount" name="amount" class="w-full bg-gray-800 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" placeholder="Enter amount">
+        </div>
+        <!-- Description -->
+        <div class="mb-4">
+            
+            <textarea id="itemDescription" name="description" class="w-full bg-gray-800 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" placeholder="Enter description"></textarea>
+        </div>
+        <!-- Quantity -->
+        <div class="mb-4">
+            
+            <input type="number" id="itemQuantity" name="quantity" class="w-full bg-gray-800 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" placeholder="Enter quantity">
+        </div>
+        <!-- Item Image (Optional) -->
+        <div class="mb-4">
+            
+            <select id="itemCategory" name="itemCategory" class="w-full bg-gray-800 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+                <option value="" disabled selected>Select a category</option>
+                {% for category in all_categories %}
+                <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="itemImage" class="block mb-2">Item Image(Optional)</label>
+            <input type="file" id="itemImage" name="" accept="image/*" class="w-full bg-gray-800 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500">
+            <p class="text-sm text-gray-500 mt-1">Optional: Choose an image for the item</p>
+        </div>
+        <!-- Submit Button -->
+        <div class="mb-4">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                <i class="fas fa-plus mr-2"></i> Add Item
+            </button>
+        </div>
+    </form>
+</div>
+</div>
+
+<!-- Div 2 -->
+<div id="form2" class="form-js dark-text" style="display: none;" data-form-id="form2">
+    <h2>Div 2</h2>
+    <p>This is the content of div 2.</p>
+    <!-- Layout Toggle -->
+    <div class="container mx-auto px-4 py-4 flex text-sm justify-center">
+        <button id="grid-btn" class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">
+            <i class="fas fa-th-large mr-2"></i> Grid View
+        </button>
+        <button id="list-btn" class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <i class="fas fa-list mr-2"></i> List View
+        </button>
+    </div>
+    <div id="item-container" class="container text-gray-700 mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Item Card -->
+        <div class="bg-blue-100 p-4 shadow-md rounded-md flex items-center justify-between">
+            <div class="flex items-center">
+                <i class="fas fa-box text-gray-600 text-2xl mr-2"></i>
+                <div>
+                    <h2 class="text-lg font-semibold mb-2">Item 1 <span>$ 50</span></h2>
+                    <p class="text-gray-600">Remaining: 5</p>
+                    <p class="text-gray-600">sold: 2</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-green-600 font-bold">Earned: $100</span>
+                <button class="text-blue-500 hover:text-blue-700 ">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="text-red-500 hover:text-red-700">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </div>
+        <div class="bg-blue-100 p-4 shadow-md rounded-md flex items-center justify-between">
+            <div class="flex items-center">
+                <i class="fas fa-box text-gray-600 text-2xl mr-2"></i>
+                <div>
+                    <h2 class="text-lg font-semibold mb-2">Item 1 <span>$ 50</span></h2>
+                    <p class="text-gray-600">Remaining: 5</p>
+                    <p class="text-gray-600">sold: 2</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-green-600 font-bold">Earned: $100</span>
+                <button class="text-blue-500 hover:text-blue-700 ">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="text-red-500 hover:text-red-700">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Add more item cards as needed -->
+    </div>
+</div>
+
+<!-- Div 3 -->
+<div id="form3" class="form-js dark-text" style="display: none;" data-form-id="form3">
+    <h2>Div 3</h2>
+    <p>This is the content of div 3.</p>
+</div>
+
+
+
+
+<script src="/static/js/popcard.js"></script>
+</body>
+</html>

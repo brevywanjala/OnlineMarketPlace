@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/styles.css">
+    
+</head>
+<body class="bg-gray-900 p-5">
+    
+    <div class="mx-auto bg-gray-700 p-4 item-center justify-center m-4 w-fit-content flex  text-white">
+        <div>
+            <h3 class="text-white font-semibold text-2xl flex justify-center">User Login</h3>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="text-sm bg-blue-100 p-2 rounded-lg text-blue-400">
+                    <ul>
+                    {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+            </div>
+            {% endif %}
+            {% endwith %}
+        <form action="/login", method="POST" >
+            
+            <input type="email" class="w-full m-2 text-gray-800 rounded-lg p-2" name="email" id="" required placeholder="email">
+            <input type="password" class="w-full m-2 text-gray-800 rounded-lg p-2" name="password" required placeholder="password">
+         
+             <div class="justify-between items-center flex">
+                 <input type="submit" class="bg-blue-500 p-2 rounded-lg ml-4  w-1/4 mt-3" value="Login">
+                 <h2 class="font-semibod text-red-500 ml-2 ">Forgot password?</h2>
+             </div>
+             <div class="flex justify-center">
+                 <h3 class="text-white m-2">are you new?</h3>
+                <a href="/register" class="w-1/2 flex justify-center rounded-lg p-2 text-white bg-green-500">Create Account</a>
+             </div>
+
+        </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

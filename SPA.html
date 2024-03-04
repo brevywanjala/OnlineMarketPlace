@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Show/Hide Components</title>
+<!-- Link to Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/SPA_for_html.css">
+</head>
+<body >
+
+<!-- Level 1 - Pages -->
+<div>
+  <button class="btn-page-xl " onclick="togglePages('xl',1)">Toggle Level 1 subpage1</button>
+  <button class="btn-page-xl " onclick="togglePages('xl',2)">Toggle Level 1 subpage2</button>
+  <button class="btn-page-xl " onclick="togglePages('xl',3)">Toggle Level 1 subpage2</button>
+  
+</div>
+<div class="page-xl  page-unhidden" id="page-xl1">
+  Level 1 - Page 1
+  <!-- Level 2 - Subpages -->
+  <div class="ml-4">
+    <button class="btn-page-lg1" onclick="togglePages('lg', 1)">Toggle Level 2 - Subpage 1</button>
+    <button class="btn-page-lg2 " onclick="togglePages('lg', 2)">Toggle Level 2 - Subpage 2</button>
+    <div class="page-lg  page-unhidden" id="page-lg1">
+      Level 2 - Subpage 1
+      <!-- Level 3 - Subpages -->
+      <div class="ml-4">
+        <button class="btn-page-sm1 " onclick="togglePages('sm', 1)">Toggle Level 3 - Subpage 1</button>
+        <button class="btn-page-sm2 " onclick="togglePages('sm', 2)">Toggle Level 3 - Subpage 2</button>
+        <div class="page-sm page-unhidden " id="page-sm1">
+          Level 3 - Subpage 1
+          <!-- Level 4 - Subpages -->
+          <div class="ml-4">
+            <button class="btn-page-xs1 " onclick="togglePages('xs', 1)">Toggle Level 4 - Subpage 1</button>
+            <button class="btn-page-xs2 " onclick="togglePages('xs', 2)">Toggle Level 4 - Subpage 2</button>
+            <div class="page-xs page-unhidden  " id="page-xs1">
+              Level 4 - Subpage 1
+              <!-- Level 5 - Subpages -->
+              <div class="ml-4">
+                <button class="btn-page-ss1 " onclick="togglePages('ss', 1)">Toggle Level 5 - Subpage 1</button>
+                <button class="btn-page-ss2 " onclick="togglePages('ss', 2)">Toggle Level 5 - Subpage 2</button>
+                <div class="page-ss " id="page-ss1">Level 5 - Subpage 1</div>
+                <div class="page-ss " id="page-ss2">Level 5 - Subpage 2</div>
+              </div>
+            </div>
+            <div class="page-xs " id="page-xs2">Level 4 - Subpage 2</div>
+          </div>
+        </div>
+        <div class="page-sm " id="page-sm2">Level 3 - Subpage 2</div>
+        
+      </div>
+    </div>
+    <div class="page-lg " id="page-lg2">Level 2 - Subpage 2</div>
+    
+  </div>
+</div>
+<div class="page-xl " id="page-xl2">
+    when repeating for this page make sure that the ids are not repeated in this file  to avoid conflicts
+</div>
+<div class="page-xl " id="page-xl3">
+    You can add as many numbers as you like but follow the hierachy
+</div>
+
+<div style="background-color:#86cdb4;padding:10px;color:black">
+    all subpage 1 for each  level have a class unhidden to make sure that they are always displayed by default
+</div>
+<script src="/static/js/SPA.js"></script>
+  
+
+</body>
+</html>
