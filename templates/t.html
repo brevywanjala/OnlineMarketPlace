@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload with Cloudinary</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Upload Image</h1>
+    <form method="POST" enctype="multipart/form-data" class="flex flex-col space-y-4" action="/">
+      <div class="flex flex-col">
+        <label for="image" class="text-sm font-medium mb-2">Select Image:</label>
+        <input type="file" id="image" name="image" class="border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">Upload</button>
+    </form>
+    {% if images %}
+      <div class="mt-8">
+        <h2 class="text-2xl font-medium mb-4">Uploaded Images:</h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {% for image in images %}
+            <li class="bg-white shadow-md rounded-md p-4">
+              <img src="{{ image.url }}" alt="Uploaded Image" class="w-full rounded-md">
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
