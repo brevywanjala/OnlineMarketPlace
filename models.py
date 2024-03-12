@@ -8,7 +8,7 @@ Base = declarative_base()
 db_url = 'sqlite:///market_store.db'
 
 # db_url='postgresql://postgres:3tFayHEBlQB6BNyoM6gc@containers-us-west-69.railway.app:7261/railway'
-engine = create_engine(db_url,pool_size=10, max_overflow=5)
+engine = create_engine(db_url , echo=True,pool_size=20, max_overflow=30)
 
 class User(Base):
     __tablename__ = 'users'

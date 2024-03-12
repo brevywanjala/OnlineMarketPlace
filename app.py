@@ -1,13 +1,16 @@
 
-from models import User,Item,Session,Category
+from models import User,Item,Category
 from flask import *
 from sqlalchemy import *
 import os
-
+from sqlalchemy.orm import sessionmaker
 
 app=Flask(__name__)
 app.secret_key='skadwhbhKAcwey'
 
+from models import db_url
+engine = create_engine(db_url , echo=True,pool_size=20, max_overflow=30)
+Session = sessionmaker(bind=engine)
 @app.route("/store")
 def store():
     # this reperesents the page fetching data of products of a single store owner
